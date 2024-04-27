@@ -16,6 +16,8 @@
   /* font */
   --font-family: "Roboto", sans-serif;
   --second-family: "Raleway", sans-serif;
+  /* transitions */
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*#endregion root */
 /*#region Visually hidden CSS pattern ------------------*/
@@ -126,7 +128,7 @@ a {
   text-decoration: none;
   color: currentColor;
   /* color: inherit; */
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 a:hover,
 a:focus {
@@ -192,7 +194,7 @@ ul {
   color: var(--white);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: var(--iris);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
 }
 .hero button:hover,
 .hero button:focus {
@@ -306,7 +308,7 @@ ul {
   height: 40px;
   border-radius: 50%;
   background-color: var(--iris);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
 }
 .team-social-item:has(> .team-social-lnk:hover),
 .team-social-item:has(> .team-social-lnk:focus) {
@@ -338,12 +340,11 @@ ul {
   height: 88px;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition), fill var(--transition);
 }
 .customer-lnk {
   fill: var(--light-slate);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition);
   /* color: var(--light-slate) */
 }
 .customer-item:hover,
@@ -397,7 +398,7 @@ ul {
   height: 40px;
   border-radius: 50%;
   background-color: var(--iris);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
 }
 .ftr-social-item:has(> .ftr-social-lnk:hover),
 .ftr-social-item:has(> .ftr-social-lnk:focus) {
@@ -429,7 +430,10 @@ ul {
   border-radius: 4px;
   width: 264px;
   height: 40px;
+  color: var(--white);
   background-color: transparent;
+  line-height: 200%;
+  letter-spacing: 0.04em;
 }
 .ftr-subscribe-btn {
   display: flex;
@@ -451,8 +455,12 @@ ul {
   fill: var(--white);
 
   background: var(--iris);
+  transition: background-color var(--transition);
 }
-.ftr-subscribe-ico {
+.ftr-subscribe-btn:hover,
+.ftr-subscribe-btn:focus {
+  background-color: var(--green);
+  cursor: pointer;
 }
 /*#endregion footer subscribe */
 /*#endregion footer --------------------------------- */
@@ -475,9 +483,8 @@ ul {
   letter-spacing: 0.04em;
   text-align: center;
   color: var(--iris);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition);
 }
 .filter button:focus,
 .filter button:hover {
@@ -498,7 +505,7 @@ ul {
 }
 .project-item {
   box-shadow: none;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition);
 }
 .project-item:has(> .project-lnk:hover),
 .project-item:has(> .project-lnk:focus) {
@@ -555,7 +562,7 @@ ul {
   background-color: var(--navy-blue-modal);
   opacity: 1;
   visibility: visible;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
   transition-property: opacity, visibility;
 }
 .backdrop.is-hidden {
@@ -590,8 +597,7 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), border var(--transition);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
