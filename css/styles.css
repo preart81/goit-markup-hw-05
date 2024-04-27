@@ -366,15 +366,16 @@ ul {
 }
 .footer .container {
   display: flex;
-  justify-content: left;
-  align-items: start;
-  gap: 120px;
+  justify-content: space-between;
 }
 .footer-text {
   width: 264px;
   margin-top: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
+}
+.ftr-social {
+  margin-left: calc(120px - ((100% - 264px - 208px - 454px - 20px * 2) / 2));
 }
 .ftr-social p {
   font-weight: 500;
@@ -409,6 +410,51 @@ ul {
 .ftr-social-ico {
   fill: var(--cloud);
 }
+/*#region footer subscribe */
+.ftr-subscribe {
+  justify-self: flex-end;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.ftr-subscribe-form {
+  margin-top: 16px;
+  display: flex;
+  gap: 25px;
+}
+.ftr-subscribe-input {
+  padding: 8px 16px;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+}
+.ftr-subscribe-btn {
+  display: flex;
+  gap: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  color: var(--white);
+  fill: var(--white);
+
+  background: var(--iris);
+}
+.ftr-subscribe-ico {
+}
+/*#endregion footer subscribe */
 /*#endregion footer --------------------------------- */
 /*#region portfolio.html ---------------------------------- */
 .section-portfolio {
