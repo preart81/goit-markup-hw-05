@@ -539,6 +539,7 @@
             </li>
           </ul>
         </div>
+        <!--#region Subscribe -->
         <div class="ftr-subscribe">
           <p>Subscribe</p>
           <form class="ftr-subscribe-form">
@@ -556,6 +557,7 @@
             </button>
           </form>
         </div>
+        <!--#endregion Subscribe -->
       </div>
     </footer>
     <!--#endregion Footer-->
@@ -563,10 +565,76 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
-          <svg class="modal-btn-ico" width="28" height="8">
+          <svg class="modal-btn-ico" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="modal-inputs">
+            <label class="modal-label">
+              <span class="modal-label-text">Name</span>
+              <span class="modal-label-span">
+                <input class="modal-input" type="text" name="name" />
+                <svg class="modal-input-ico" width="12" height="12">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-label">
+              <span class="modal-label-text">Phone</span>
+              <span class="modal-label-span">
+                <input class="modal-input" type="tel" name="phone" />
+                <svg class="modal-input-ico" width="13" height="13">
+                  <use href="./images/icons.svg#icon-tel"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-label">
+              <span class="modal-label-text">Email</span>
+              <span class="modal-label-span">
+                <input class="modal-input" type="email" name="email" />
+                <svg class="modal-input-ico" width="15" height="12">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="modal-label">
+              <span class="modal-label-text">Comment</span>
+              <textarea
+                class="modal-input modal-input-textarea"
+                name="comment"
+                placeholder="Text input"
+                rows="5"
+                cols="30"
+              ></textarea>
+            </label>
+          </div>
+          <label class="modal-privacy-label">
+            <input
+              class="modal-privacy-checkbox visually-hidden"
+              type="checkbox"
+              name="agreement"
+              required
+            />
+            <span class="modal-privacy-label-text"
+              ><span class="modal-privacy-checkbox-custom"
+                ><svg class="modal-privacy-checkmark" width="10" height="8">
+                  <use
+                    href="./images/icons.svg#icon-checkmark"
+                  ></use></svg></span
+              >I accept the terms and conditions of the
+              <a
+                class="modal-privacy-policy-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy Policy</a
+              ></span
+            >
+          </label>
+          <button class="modal-btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
